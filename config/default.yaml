@@ -1,0 +1,69 @@
+# Default configuration for machine learning experiments
+
+# Experiment settings
+task: "classification"
+target_column: "target"
+random_state: 42
+
+# Data settings
+data:
+  sklearn_dataset: "iris"  # Options: iris, breast_cancer, digits
+
+# Cross-validation settings
+cross_validation:
+  folds: 5
+  stratify: true
+
+# Preprocessing settings
+preprocessing:
+  missing_values:
+    strategy: "mean"  # Options: mean, median, most_frequent, constant
+  categorical_encoding:
+    method: "onehot"  # Options: onehot, ordinal, label
+  scaling:
+    method: "standard"  # Options: standard, minmax, robust
+  outliers:
+    method: "iqr"  # Options: iqr, zscore
+    threshold: 1.5
+
+# Feature engineering settings
+features:
+  polynomial:
+    degree: 2
+    columns: []  # Add column names for polynomial features
+  interactions:
+    pairs: []  # Add pairs like [["feature1", "feature2"]]
+  binning:
+    bins: 5
+    columns: []  # Add column names for binning
+  statistics:
+    groupby_column: null
+    aggregate_columns: []
+    operations: ["mean", "std", "min", "max"]
+  selection:
+    method: "mutual_info"  # Options: mutual_info, f_statistic, chi2
+    k: 10
+
+# Model settings
+model:
+  type: "random_forest"  # Options: random_forest, gradient_boosting, svm, logistic_regression, etc.
+  parameters:
+    n_estimators: 100
+    max_depth: 10
+    random_state: 42
+
+# Training settings
+training:
+  test_size: 0.2
+  stratify: true
+
+# Logging settings
+logging:
+  level: "INFO"
+  file: "logs/experiment.log"
+
+# Output settings
+output:
+  model_path: "models/checkpoints/"
+  results_path: "results/"
+  plots_path: "results/plots/"
