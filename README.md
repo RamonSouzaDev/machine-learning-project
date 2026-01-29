@@ -262,9 +262,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## 📞 Contact
 
 **Ramon Souza**
-- LinkedIn: [Your LinkedIn Profile]
+- LinkedIn: [LinkedIn Profile](https://www.linkedin.com/in/ramon-mendes-b44456164)
 - GitHub: [RamonSouzaDev](https://github.com/RamonSouzaDev)
-- Email: your.email@example.com
+- Email: dwmom@hotmail.com
 
 ---
 
